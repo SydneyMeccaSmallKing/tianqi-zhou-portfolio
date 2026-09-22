@@ -29,7 +29,9 @@ export function Projects() {
                     <img
                       src={p.image}
                       alt=""
-                      className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                      className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] ${
+                        p.id === "industry" ? "object-center" : "object-top"
+                      }`}
                     />
                     <span className="absolute top-3 left-3 rounded-full bg-bg/70 px-3 py-1 font-display text-xs font-medium text-fg backdrop-blur-sm">
                       {p.tag}
